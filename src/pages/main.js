@@ -1,17 +1,15 @@
-import React, {Component} from 'react';
+import React from "react";
 
-import {View, Text} from 'react-native';
+import { View, Text } from "react-native";
 
-export default class main extends Component {
+export default function main() {
+  const navigationOptions = {
+    title: "Main"
+  };
 
-    static navigationOptions = {
-        title:  'Main'
-    }
-  render() {
-    return (
-      <View>
-        <Text>Pagina Main</Text>
-      </View>
-    );
-  }
+  return (
+    <View>
+      <Text>Pagina Main</Text>
+    </View>
+  );
 }

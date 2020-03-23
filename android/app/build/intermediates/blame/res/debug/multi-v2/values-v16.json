@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/lucaslimoni/React_Native/App/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/Users/06587465960/Documents/Baggins/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/lucaslimoni/.gradle/caches/transforms-2/files-2.1/0e0262de3489f7668fe91fa91a5a7372/res/values-v16/values-v16.xml",
+                    "source": "/Users/06587465960/.gradle/caches/transforms-2/files-2.1/61a5e22ef7e372bd79e90f5ba9326699/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/06587465960/.gradle/caches/transforms-2/files-2.1/87a10f46398615527f536a5453084108/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "/Users/lucaslimoni/.gradle/caches/transforms-2/files-2.1/25f219939c71fee22e722b59537029e4/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]
