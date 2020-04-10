@@ -71,8 +71,8 @@ const Tab = createMaterialBottomTabNavigator(
   },
   {
     initialRouteName: "Profile",
-    activeColor: "#ffffff",
-    inactiveColor: "#3a397b",
+    activeColor: "#3a397b",
+    inactiveColor: "#ffffff",
     barStyle: {
       backgroundColor: "#f2ac33",
     },
