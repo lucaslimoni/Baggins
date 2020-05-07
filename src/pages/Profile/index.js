@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {
   Card,
   ListItem,
   Button,
   Icon,
   Divider,
-  Avatar
+  Avatar,
 } from "react-native-elements";
 
 import {
@@ -13,29 +14,43 @@ import {
   Text,
   Image,
   ImageBackground,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import { classes } from "./styles";
+import reactotron from "reactotron-react-native";
 
-export default function Profile() {
-  // const navigationOptions = {
-  //   title: "Profile"
-  // };
+async function background() {
+  const uri = await axios.get("https://source.unsplash.com/featured/?travel");
+  return uri;
+}
 
+function getRandom(max) {
+  return Math.floor(Math.random() * max + 1);
+}
+
+export default function Profile({ navigation }) {
+  const [num, setNum] = useState([]);
+  useEffect(() => {
+    setNum(getRandom(20));
+  }, []);
+
+  reactotron.log(num);
   return (
     <View style={classes.root}>
       <View style={classes.modulo}>
         <TouchableOpacity
           onPress={() => {
-            alert("aqui");
+            navigation.navigate("DadosPessoais", {
+              source: num,
+            });
           }}
         >
           <ImageBackground
             source={require("../../assets/img/personData.png")}
             style={{ width: "100%", height: "100%" }}
-            onPress={() => {
-              alert("You tapped the button!");
-            }}
+            // onPress={() => {
+            //   alert("You tapped the button!");
+            // }}
           >
             <View
               style={{
@@ -44,7 +59,7 @@ export default function Profile() {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
               <Text
@@ -53,7 +68,7 @@ export default function Profile() {
                   fontSize: 26,
                   fontWeight: "bold",
                   color: "#ffffff",
-                  marginTop: 20
+                  marginTop: 20,
                 }}
               >
                 DADOS PESSOAIS
@@ -66,16 +81,27 @@ export default function Profile() {
       <View style={classes.modulo}>
         <TouchableOpacity
           onPress={() => {
-            alert("aqui");
+            navigation.navigate(
+              "Curriculo"
+              // , {
+              //   oportunidade: {
+              //     index: index,
+              //     id: item.id,
+              //     title: item.title,
+              //     uri: item.uri,
+              //     descricao: item.descricao,
+              //   },
+              // }
+            );
           }}
         >
           <ImageBackground
             source={require("../../assets/img/abilities.jpg")}
             style={{ width: "100%", height: "100%" }}
-            onPress={() => {
-              alert("You tapped the button!");
-              console.log("teste curriculo");
-            }}
+            // onPress={() => {
+            //   alert("You tapped the button!");
+            //   console.log("teste curriculo");
+            // }}
           >
             <View
               style={{
@@ -84,7 +110,7 @@ export default function Profile() {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
               <Text
@@ -93,7 +119,7 @@ export default function Profile() {
                   fontSize: 26,
                   fontWeight: "bold",
                   color: "#ffffff",
-                  marginTop: 20
+                  marginTop: 20,
                 }}
               >
                 CURRICULO
@@ -106,18 +132,29 @@ export default function Profile() {
       <View style={classes.modulo}>
         <TouchableOpacity
           onPress={() => {
-            alert("aqui");
+            navigation.navigate(
+              "Interesse"
+              // , {
+              //   oportunidade: {
+              //     index: index,
+              //     id: item.id,
+              //     title: item.title,
+              //     uri: item.uri,
+              //     descricao: item.descricao,
+              //   },
+              // }
+            );
           }}
         >
           <ImageBackground
             source={require("../../assets/img/interest.png")}
             style={{
               width: "100%",
-              height: "100%"
+              height: "100%",
             }}
-            onPress={() => {
-              alert("You tapped the button!");
-            }}
+            // onPress={() => {
+            //   alert("You tapped the button!");
+            // }}
           >
             <View
               style={{
@@ -126,7 +163,7 @@ export default function Profile() {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
               <Text
@@ -135,7 +172,7 @@ export default function Profile() {
                   fontSize: 26,
                   fontWeight: "bold",
                   color: "#ffffff",
-                  marginTop: 20
+                  marginTop: 20,
                 }}
               >
                 INTERESSES
