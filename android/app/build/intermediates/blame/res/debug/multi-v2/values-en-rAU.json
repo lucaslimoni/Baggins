@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/lucaslimoni/React_Native/App/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "/Users/lucaslimoni/Documents/Baggins/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
                     "source": "/Users/lucaslimoni/.gradle/caches/transforms-2/files-2.1/25f219939c71fee22e722b59537029e4/res/values-en-rAU/values-en-rAU.xml",
