@@ -13,6 +13,7 @@ import Oportunidade from "./pages/Oportunidade";
 import DadosPessoais from "./pages/Profile/DadosPessoais";
 import Interesse from "./pages/Profile/Interesse";
 import Curriculo from "./pages/Profile/Curriculo";
+import AlterarDadosPessoais from "./pages/Profile/DadosPessoais/AlterarDadosPessoais";
 
 const HomeStack = createStackNavigator(
   {
@@ -48,6 +49,17 @@ const ProfileStack = createStackNavigator(
     DadosPessoais: {
       screen: DadosPessoais, navigationOptions: {
         headerTitleAlign: "center",
+        headerTitle: 'Dados Pessoais',
+        headerTintColor: "#3a397b",
+        headerStyle: {
+          backgroundColor: "#f2ac33",
+        },
+      }
+    },
+    AlterarDadosPessoais: {
+      screen: AlterarDadosPessoais, navigationOptions: {
+        headerTitleAlign: "center",
+        headerTitle: 'Alterar Dados Pessoais',
         headerTintColor: "#3a397b",
         headerStyle: {
           backgroundColor: "#f2ac33",

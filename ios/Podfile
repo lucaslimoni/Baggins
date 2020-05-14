@@ -36,6 +36,10 @@ target 'App' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+
+  pod 'RNFileViewer', :path => '../node_modules/react-native-file-viewer'
+
   target 'AppTests' do
     inherit! :search_paths
     # Pods for testing
